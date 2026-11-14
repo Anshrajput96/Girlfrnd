@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Komal ❤️</title>
+<title>My Komal ❤️</title>
 
 <style>
 * {
@@ -15,32 +14,32 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg,#ff758c,#ff7eb3,#c084fc);
+  background: linear-gradient(135deg,#ff5f9e,#ff9ac2,#b58aff);
   font-family: Arial, sans-serif;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-  color: white;
   padding: 20px 0;
+  overflow-x: hidden;
 }
 
 .card {
   width: 92%;
-  max-width: 420px;
+  max-width: 430px;
   padding: 25px 20px;
   text-align: center;
-  border-radius: 30px;
-  background: rgba(255,255,255,0.20);
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(255,255,255,0.4);
-  box-shadow: 0 10px 40px #8c174b66;
+  background: rgba(255,255,255,.20);
+  border: 2px solid rgba(255,255,255,.4);
+  border-radius: 28px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px #811c5066;
   z-index: 2;
 }
 
 h1 {
-  font-size: 34px;
-  margin: 12px 0;
+  font-size: 32px;
+  margin: 15px 0;
 }
 
 h2 {
@@ -49,49 +48,44 @@ h2 {
 
 p {
   line-height: 1.7;
-  margin: 15px 0;
-  font-size: 16px;
+  margin: 14px 0;
 }
 
 .teddy {
-  font-size: 105px;
-  margin: 15px;
+  font-size: 115px;
+  display: inline-block;
   cursor: pointer;
-  animation: teddy 1.5s infinite alternate;
-  filter: drop-shadow(0 8px 10px #8d245a55);
+  animation: dance 1s infinite alternate;
+  filter: drop-shadow(0 8px 8px #76254b55);
 }
 
-@keyframes teddy {
-  from { transform: rotate(-8deg) translateY(0); }
-  to { transform: rotate(8deg) translateY(-12px); }
+@keyframes dance {
+  from {transform: rotate(-10deg) translateY(0);}
+  to {transform: rotate(10deg) translateY(-12px);}
 }
 
 .speech {
   background: white;
   color: #ff2879;
-  padding: 13px;
-  border-radius: 20px;
+  border-radius: 22px;
+  padding: 14px;
+  margin: 15px 0;
   font-weight: bold;
-  margin: 12px 0;
+  box-shadow: 0 4px 12px #8d245a33;
 }
 
 button {
-  padding: 13px 25px;
+  padding: 13px 23px;
   border: none;
   border-radius: 30px;
-  margin: 8px;
+  margin: 8px 4px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-button:active {
-  transform: scale(0.95);
 }
 
 .talk {
-  background: #fff;
+  background: white;
   color: #ff2879;
 }
 
@@ -105,29 +99,29 @@ button:active {
   color: #ff1744;
 }
 
-.love-letter {
-  background: rgba(255,255,255,0.2);
-  padding: 15px;
-  border-radius: 18px;
-  margin: 15px 0;
+.letter {
+  background: #ffffff30;
+  padding: 18px;
+  border-radius: 20px;
+  margin: 18px 0;
 }
 
 #surprise {
   display: none;
-  margin-top: 20px;
+  padding: 15px;
   animation: appear 1s;
 }
 
 @keyframes appear {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
+  from {opacity: 0;transform: scale(.5);}
+  to {opacity: 1;transform: scale(1);}
 }
 
 .heart {
   position: fixed;
   bottom: -30px;
+  animation: fly 6s linear forwards;
   pointer-events: none;
-  animation: fly 7s linear forwards;
   z-index: 1;
 }
 
@@ -139,9 +133,8 @@ button:active {
 }
 
 .footer {
-  font-size: 13px;
-  opacity: 0.9;
   margin-top: 20px;
+  font-size: 13px;
 }
 </style>
 </head>
@@ -150,46 +143,43 @@ button:active {
 
 <div class="card">
 
-  <div style="font-size:35px;">💖✨💖</div>
+  <div style="font-size:35px">💖✨💖</div>
 
   <h1>My Komal 🥰</h1>
-
   <h2>I LOVE YOU BABU ❤️</h2>
 
   <div class="speech" id="speech">
-    Hello Komal Babu! 🥹❤️
+    Hello my sweet Komal! 🥹💕
   </div>
 
-  <div class="teddy" onclick="speakLove()">
+  <div class="teddy" onclick="teddyTalk()">
     🧸
   </div>
 
-  <button class="talk" onclick="speakLove()">
+  <p>Touch Your Teddy Babu! 😘</p>
+
+  <button class="talk" onclick="teddyTalk()">
     🔊 Teddy Se Baat Karo
   </button>
 
-  <div class="love-letter">
+  <div class="letter">
     <h2>💌 My Love Letter</h2>
 
     <p>
-      Dear Komal ❤️
-      <br><br>
-      Tum meri zindagi ka sabse pyara hissa ho.
-      Tumhari smile meri favourite hai.
-      Tumse baat karke mera din special ban jata hai.
-      <br><br>
-      Pata nahi tum kitni special ho mere liye,
-      bas itna pata hai ki tumhari khushi
-      mere liye bahut maayne rakhti hai.
-      🥹💕
+      Dear Komal ❤️<br><br>
+      Tum meri zindagi ki sabse pyari
+      feeling ho. Tumhari smile meri
+      favourite hai.<br><br>
+      Tumse baat karna, tumhe dekhna
+      aur tumhari khushi meri
+      sabse special wish hai. 🥹<br><br>
+      I LOVE YOU SO MUCH BABU! 💋
     </p>
-
-    <h3>❤️ I LOVE YOU KOMAL ❤️</h3>
   </div>
 
   <h2>💍 Will You Be Mine Forever?</h2>
 
-  <p>Ek baar dil se soch kar jawab dena babu 🥺</p>
+  <p>Ek baar dil se jawab dena Komal! ❤️</p>
 
   <button class="yes" onclick="yesClick()">
     YES ❤️
@@ -201,12 +191,11 @@ button:active {
 
   <div id="surprise">
     <h1>YAYYYYY! 😍</h1>
-    <div style="font-size:85px;">🧸💐💍</div>
+    <div style="font-size:85px">🧸💐💍</div>
     <h2>I LOVE YOU KOMAL BABU! ❤️</h2>
     <p>
-      Tumhari smile hamesha bani rahe.
-      <br>
-      Sending you lots of love and hugs! 🥰
+      You are my sweetest person!<br>
+      Sending you unlimited hugs! 🥰
     </p>
     <h1>😘❤️😘</h1>
   </div>
@@ -230,35 +219,45 @@ if ("speechSynthesis" in window) {
   window.speechSynthesis.onvoiceschanged = loadVoices;
 }
 
-function speakLove() {
+// Cartoon style romantic Teddy voice
+function speak(text) {
 
   if (!("speechSynthesis" in window)) {
-    alert("Sorry! Your browser does not support voice.");
+    alert("Your browser does not support voice.");
     return;
   }
 
   window.speechSynthesis.cancel();
 
-  let msg = new SpeechSynthesisUtterance();
+  let msg = new SpeechSynthesisUtterance(text);
 
-  msg.text =
-  "Hello Komal Babu! I love you so much. You are very special. Sending you lots of love. Muaaah!";
+  // Available English voice
+  let selectedVoice =
+    voices.find(v => v.lang.toLowerCase() === "en-in") ||
+    voices.find(v => v.lang.toLowerCase().startsWith("en"));
 
-  msg.lang = "en-IN";
-  msg.rate = 0.85;
-  msg.pitch = 1.5;
+  if (selectedVoice) {
+    msg.voice = selectedVoice;
+  }
+
+  msg.lang = selectedVoice ? selectedVoice.lang : "en-US";
+
+  // High pitch for cute cartoon effect
+  msg.pitch = 1.9;
+  msg.rate = 0.88;
   msg.volume = 1;
 
-  let voice = voices.find(v =>
-    v.lang.toLowerCase().startsWith("en-in")
-  );
-
-  if (voice) msg.voice = voice;
-
   window.speechSynthesis.speak(msg);
+}
+
+function teddyTalk() {
 
   document.getElementById("speech").innerHTML =
-  "I LOVE YOU KOMAL BABU! ❤️😘";
+    "I LOVE YOU KOMAL BABU! 🧸❤️";
+
+  speak(
+    "Hello my sweet Komal! I love you so much, Babu! You are my sweetest princess. Sending you lots of love and a big teddy hug! Muaah!"
+  );
 }
 
 function yesClick() {
@@ -266,40 +265,28 @@ function yesClick() {
   document.getElementById("surprise").style.display = "block";
 
   document.getElementById("speech").innerHTML =
-  "You made my day Komal! 🥹❤️";
+    "You made my day Komal! 🥹❤️";
 
   createHearts(60);
 
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: "smooth"
-  });
+  speak(
+    "Yay! I love you Komal Babu! You are so special! Sending you a big teddy hug and lots of kisses!"
+  );
 
-  setTimeout(speakLove, 700);
+  setTimeout(() => {
+    document.getElementById("surprise").scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }, 300);
 }
 
 function noClick() {
 
   document.getElementById("speech").innerHTML =
-  "Koi baat nahi Komal, tumhari khushi sabse zaroori hai ❤️";
+    "Your happiness matters the most Komal! ❤️";
 
-  speakMessage(
-    "It's okay Komal. Your happiness matters the most."
-  );
-}
-
-function speakMessage(text) {
-
-  if (!("speechSynthesis" in window)) return;
-
-  window.speechSynthesis.cancel();
-
-  let msg = new SpeechSynthesisUtterance(text);
-  msg.lang = "en-IN";
-  msg.pitch = 1.4;
-  msg.rate = 0.85;
-
-  window.speechSynthesis.speak(msg);
+  speak("It's okay Komal. Your happiness matters the most. Lots of love.");
 }
 
 function createHearts(count = 1) {
@@ -311,17 +298,17 @@ function createHearts(count = 1) {
     heart.className = "heart";
 
     heart.innerHTML =
-    ["❤️","💕","💖","💗","💘","🥰"][
-      Math.floor(Math.random() * 6)
-    ];
+      ["❤️","💕","💖","💗","💘","🥰"][
+        Math.floor(Math.random() * 6)
+      ];
 
     heart.style.left = Math.random() * 100 + "vw";
 
     heart.style.fontSize =
-    (20 + Math.random() * 25) + "px";
+      (20 + Math.random() * 25) + "px";
 
     heart.style.animationDuration =
-    (3 + Math.random() * 5) + "s";
+      (3 + Math.random() * 5) + "s";
 
     document.body.appendChild(heart);
 
@@ -329,7 +316,7 @@ function createHearts(count = 1) {
   }
 }
 
-setInterval(() => createHearts(1), 500);
+setInterval(() => createHearts(1), 600);
 
 </script>
 
