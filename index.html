@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My  Favorite Girl Komal ❤️</title>
+<title>For My Komal ❤️</title>
 
 <style>
 * {
@@ -15,57 +15,84 @@
 
 body {
   min-height: 100vh;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3,#c084fc);
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg,#ff758c,#ff7eb3,#a18cd1);
-  font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   color: white;
+  padding: 20px 0;
 }
 
 .card {
-  width: 90%;
-  max-width: 400px;
-  padding: 35px 22px;
+  width: 92%;
+  max-width: 420px;
+  padding: 25px 20px;
   text-align: center;
-  background: rgba(255,255,255,0.18);
+  border-radius: 30px;
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(15px);
   border: 2px solid rgba(255,255,255,0.4);
-  border-radius: 25px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 40px #8b174b55;
+  box-shadow: 0 10px 40px #8c174b66;
   z-index: 2;
-}
-
-.heart {
-  font-size: 65px;
-  animation: beat 1s infinite;
-}
-
-@keyframes beat {
-  50% { transform: scale(1.2); }
 }
 
 h1 {
   font-size: 34px;
+  margin: 12px 0;
+}
+
+h2 {
   margin: 15px 0;
 }
 
 p {
-  font-size: 17px;
   line-height: 1.7;
   margin: 15px 0;
+  font-size: 16px;
+}
+
+.teddy {
+  font-size: 105px;
+  margin: 15px;
+  cursor: pointer;
+  animation: teddy 1.5s infinite alternate;
+  filter: drop-shadow(0 8px 10px #8d245a55);
+}
+
+@keyframes teddy {
+  from { transform: rotate(-8deg) translateY(0); }
+  to { transform: rotate(8deg) translateY(-12px); }
+}
+
+.speech {
+  background: white;
+  color: #ff2879;
+  padding: 13px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 12px 0;
 }
 
 button {
-  padding: 13px 27px;
+  padding: 13px 25px;
   border: none;
   border-radius: 30px;
-  font-size: 17px;
+  margin: 8px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  margin: 10px 5px;
   transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.talk {
+  background: #fff;
+  color: #ff2879;
 }
 
 .yes {
@@ -78,22 +105,29 @@ button {
   color: #ff1744;
 }
 
-button:hover {
-  transform: scale(1.1);
+.love-letter {
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 18px;
+  margin: 15px 0;
 }
 
 #surprise {
   display: none;
-  font-size: 23px;
   margin-top: 20px;
-  animation: beat 1s infinite;
+  animation: appear 1s;
 }
 
-.floating {
-  position: absolute;
+@keyframes appear {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.heart {
+  position: fixed;
   bottom: -30px;
-  animation: fly 7s linear infinite;
-  opacity: 0.8;
+  pointer-events: none;
+  animation: fly 7s linear forwards;
   z-index: 1;
 }
 
@@ -103,6 +137,12 @@ button:hover {
     opacity: 0;
   }
 }
+
+.footer {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 20px;
+}
 </style>
 </head>
 
@@ -110,68 +150,187 @@ button:hover {
 
 <div class="card">
 
-  <div class="heart">❤️</div>
+  <div style="font-size:35px;">💖✨💖</div>
 
-  <h1> Komal 🥰</h1>
+  <h1>My Komal 🥰</h1>
 
-  <h2>I LOVE YOU KOMAL  ❤️</h2>
+  <h2>I LOVE YOU BABU ❤️</h2>
 
-  <p>
-    Pata nahi tum meri zindagi mein kab itni special ban gayi,
-    par ab har khushi mein tumhara naam aata hai. 💕
-  </p>
+  <div class="speech" id="speech">
+    Hello Komal Babu! 🥹❤️
+  </div>
 
-  <p>
-    Tumhari smile meri favourite hai,
-    aur tumhara saath meri sabse pyari wish hai. 🥹
-  </p>
+  <div class="teddy" onclick="speakLove()">
+    🧸
+  </div>
 
-  <h2>Will You Be Mine Forever? 💍</h2>
+  <button class="talk" onclick="speakLove()">
+    🔊 Teddy Se Baat Karo
+  </button>
+
+  <div class="love-letter">
+    <h2>💌 My Love Letter</h2>
+
+    <p>
+      Dear Komal ❤️
+      <br><br>
+      Tum meri zindagi ka sabse pyara hissa ho.
+      Tumhari smile meri favourite hai.
+      Tumse baat karke mera din special ban jata hai.
+      <br><br>
+      Pata nahi tum kitni special ho mere liye,
+      bas itna pata hai ki tumhari khushi
+      mere liye bahut maayne rakhti hai.
+      🥹💕
+    </p>
+
+    <h3>❤️ I LOVE YOU KOMAL ❤️</h3>
+  </div>
+
+  <h2>💍 Will You Be Mine Forever?</h2>
+
+  <p>Ek baar dil se soch kar jawab dena babu 🥺</p>
 
   <button class="yes" onclick="yesClick()">
     YES ❤️
   </button>
 
-  <button class="no" id="noBtn" onclick="noClick()">
+  <button class="no" onclick="noClick()">
     NO 🙈
   </button>
 
   <div id="surprise">
-    YAYYYYY! 🥹❤️<br>
-    I LOVE YOU KOMAL !! ❤ Please man jaao ywar😌<br>
-    Forever Together! 💞
+    <h1>YAYYYYY! 😍</h1>
+    <div style="font-size:85px;">🧸💐💍</div>
+    <h2>I LOVE YOU KOMAL BABU! ❤️</h2>
+    <p>
+      Tumhari smile hamesha bani rahe.
+      <br>
+      Sending you lots of love and hugs! 🥰
+    </p>
+    <h1>😘❤️😘</h1>
+  </div>
+
+  <div class="footer">
+    Made With ❤️ Just For Komal
   </div>
 
 </div>
 
 <script>
-function yesClick() {
-  document.getElementById("surprise").style.display = "block";
-  document.getElementById("noBtn").style.display = "none";
 
-  for(let i=0; i<40; i++) {
-    createHeart();
+let voices = [];
+
+function loadVoices() {
+  voices = window.speechSynthesis.getVoices();
+}
+
+if ("speechSynthesis" in window) {
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakLove() {
+
+  if (!("speechSynthesis" in window)) {
+    alert("Sorry! Your browser does not support voice.");
+    return;
   }
+
+  window.speechSynthesis.cancel();
+
+  let msg = new SpeechSynthesisUtterance();
+
+  msg.text =
+  "Hello Komal Babu! I love you so much. You are very special. Sending you lots of love. Muaaah!";
+
+  msg.lang = "en-IN";
+  msg.rate = 0.85;
+  msg.pitch = 1.5;
+  msg.volume = 1;
+
+  let voice = voices.find(v =>
+    v.lang.toLowerCase().startsWith("en-in")
+  );
+
+  if (voice) msg.voice = voice;
+
+  window.speechSynthesis.speak(msg);
+
+  document.getElementById("speech").innerHTML =
+  "I LOVE YOU KOMAL BABU! ❤️😘";
+}
+
+function yesClick() {
+
+  document.getElementById("surprise").style.display = "block";
+
+  document.getElementById("speech").innerHTML =
+  "You made my day Komal! 🥹❤️";
+
+  createHearts(60);
+
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+  });
+
+  setTimeout(speakLove, 700);
 }
 
 function noClick() {
-  alert("Ek baar phir soch lo Komal Babu! 🥺❤️");
+
+  document.getElementById("speech").innerHTML =
+  "Koi baat nahi Komal, tumhari khushi sabse zaroori hai ❤️";
+
+  speakMessage(
+    "It's okay Komal. Your happiness matters the most."
+  );
 }
 
-function createHeart() {
-  let heart = document.createElement("div");
-  heart.className = "floating";
-  heart.innerHTML = ["❤️","💕","💖","💗","🥰"][Math.floor(Math.random()*5)];
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.fontSize = (20+Math.random()*25) + "px";
-  heart.style.animationDuration = (3+Math.random()*5) + "s";
+function speakMessage(text) {
 
-  document.body.appendChild(heart);
+  if (!("speechSynthesis" in window)) return;
 
-  setTimeout(() => heart.remove(), 8000);
+  window.speechSynthesis.cancel();
+
+  let msg = new SpeechSynthesisUtterance(text);
+  msg.lang = "en-IN";
+  msg.pitch = 1.4;
+  msg.rate = 0.85;
+
+  window.speechSynthesis.speak(msg);
 }
 
-setInterval(createHeart, 500);
+function createHearts(count = 1) {
+
+  for (let i = 0; i < count; i++) {
+
+    let heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+    ["❤️","💕","💖","💗","💘","🥰"][
+      Math.floor(Math.random() * 6)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+    (20 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+    (3 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+  }
+}
+
+setInterval(() => createHearts(1), 500);
+
 </script>
 
 </body>
